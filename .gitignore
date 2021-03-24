@@ -1,0 +1,13 @@
+*.pyc
+*~
+
+checkpoint
+logs
+model_best
+
+*.csv
+*.tar.gz
+
+# datasets
+redial
+movielens
