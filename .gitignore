@@ -9,5 +9,5 @@ model_best
 *.tar.gz
 
 # datasets
-redial
+# redial
 movielens
