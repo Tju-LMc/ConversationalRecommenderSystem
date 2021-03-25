@@ -19,7 +19,7 @@ def load_movies(path):
 def load_movies_merged(path):
     with open(path, 'r') as f:
         reader = csv.reader(f)
-        id2index = {row[3]: int(row[0]) for row in reader if row[0] != "index"}
+        id2index = {row[3]: int(row[0]) for row in reader if len(row) > 0 and row[0] != "index"}
     return id2index
 
 
@@ -41,7 +41,7 @@ def load_ratings(path, as_array=True):
     otherwise, return an array [{movieId: rating}] where each element corresponds to one user.
     """
     data = {}
-    with open(path, 'r') as f:
+    with open(path, 'r', encoding='utf8') as f:
         reader = csv.reader(f)
         for userId, movieId, rating, timestamp in tqdm(reader):
             if userId != "userId":  # avoid the first row
@@ -98,7 +98,7 @@ class MlBatchLoader(object):
         if ratings01 is None:
             ratings01 = self.ratings01
         # list of users for the batch
-        batch_data = list(self.keys[subset])[self.batch_index[subset] * self.batch_size:(self.batch_index[subset] + 1) * self.batch_size]
+        batch_data = list(self.keys[subset])[self.batch_index[subset] * self.batch_size: (self.batch_index[subset] + 1) * self.batch_size]
 
         self.batch_index[subset] = (self.batch_index[subset] + 1) % self.n_batches[subset]
 

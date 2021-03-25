@@ -41,6 +41,7 @@ class DecoderGRU(nn.Module):
         """Set embedding weights."""
         with torch.no_grad():
             self.embedding.weight.set_(embedding_matrix)
+        # self.embedding.weight.data.set_(embedding_matrix)
 
     def forward(self, input_sequence, lengths, context=None, state=None):
         """

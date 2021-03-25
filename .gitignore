@@ -1,5 +1,6 @@
 *.pyc
-*~
+# *~
+.vscode
 
 checkpoint
 logs
@@ -11,3 +12,4 @@ model_best
 # datasets
 # redial
 movielens
+external

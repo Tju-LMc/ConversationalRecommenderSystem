@@ -54,7 +54,7 @@ class HRNN(nn.Module):
             self.gensen = GenSenSingle(
                 model_folder=os.path.join(config.MODELS_PATH, 'GenSen'),
                 filename_prefix='nli_large',
-                pretrained_emb=os.path.join(config.MODELS_PATH, 'embeddings/glove.840B.300d.h5'),
+                pretrained_emb='embeddings/glove.840B.300d.h5',
                 cuda=self.cuda_available
             )
             self.gensen.vocab_expansion(list(train_vocabulary))

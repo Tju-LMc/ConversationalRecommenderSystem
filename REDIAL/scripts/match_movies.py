@@ -5,9 +5,6 @@ import argparse
 import os
 import sys
 
-# reload(sys)
-# sys.setdefaultencoding('utf8')
-
 
 def merge_indexes(matched_db_path, movielens_path, write_to):
     """
@@ -49,7 +46,11 @@ def read_csv(path):
     """
     with open(path, 'r') as f:
         reader = csv.reader(f)
-        id2movie = {int(row[0]): row[1:] for row in reader if row[0] != 'movieId'}
+        id2movie = {}
+        for row in reader:
+            if len(row) > 0 and row[0] != 'movieId':
+                id2movie[int(row[0])] = row[1:]
+        # id2movie = {int(row[0]):   }
     return id2movie
 
 
@@ -140,9 +141,9 @@ if __name__ == '__main__':
     # intermediate file used to match the movie names.
     intermediate_file = "movies_matched.csv"
     parser = argparse.ArgumentParser()
-    parser.add_argument("--redial_movies_path")
-    parser.add_argument("--ml_movies_path")
-    parser.add_argument("--destination", default="data/movies_merged.csv")
+    parser.add_argument("--redial_movies_path", default="REDIAL/external/redial/movies_with_mentions.csv")
+    parser.add_argument("--ml_movies_path", default="REDIAL/external/movielens/ml-latest/movies.csv")
+    parser.add_argument("--destination", default="REDIAL/external/redial/movies_merged.csv")
     args = parser.parse_args()
     _ = find_in_file(args.redial_movies_path,
                      args.ml_movies_path,

@@ -17,9 +17,6 @@ from utils import tokenize
 
 import sys
 
-# reload(sys)
-# sys.setdefaultencoding('utf8')
-
 
 def load_data(path):
     """
@@ -41,7 +38,7 @@ def get_movies(path):
         # remove date from movie name
         date_pattern = re.compile(r'\(\d{4}\)')
         for row in reader:
-            if row[0] != "index":
+            if len(row) > 0 and row[0] != "index":
                 id2name[int(row[0])] = date_pattern.sub('', row[1])
                 db2id[int(row[2])] = int(row[0])
     del db2id[-1]
@@ -115,9 +112,9 @@ class DialogueBatchLoader(object):
         # So db2id is a dictionary mapping ReDial movie Ids to global movieIds
         self.id2name, self.db2id = get_movies(self.movie_path)
         self.db2name = {db: self.id2name[id] for db, id in self.db2id.items()}
-        self.n_movies = len(self.db2id.values())  # number of movies mentioned in ReDial
+        self.n_movies = len(self.db2id.values())  # len len(id2name) 59946 number of movies mentioned in ReDial 6924
         print('{} movies'.format(self.n_movies))
-        # load data
+        # load data 6924 movies
         print("Loading and processing data")
         self.conversation_data = {key: load_data(val) for key, val in self.data_path.items()}
         if self.training_size > 0:
@@ -161,7 +158,7 @@ class DialogueBatchLoader(object):
         for (i, conversation) in enumerate(data):
             init_q = conversation["initiatorQuestions"]
             resp_q = conversation["respondentQuestions"]
-            # get movies that are in both forms. Do not take empty movie names
+            # get movies that are in both forms. Do not take empty movie names # 得到每个 key 
             gen = (key for key in init_q if key in resp_q and not self.db2name[int(key)].isspace())
             for key in gen:
                 answers = [init_q[key]["suggested"],
@@ -171,7 +168,7 @@ class DialogueBatchLoader(object):
                            resp_q[key]["seen"],
                            resp_q[key]["liked"]]
                 form_data.append((self.db2id[int(key)], self.db2name[int(key)], answers, i))
-        return form_data
+        return form_data # 一段对话 n 个电影 从 8004 -> 41360
 
     def extract_ratings_data(self, data):
         """
@@ -201,18 +198,18 @@ class DialogueBatchLoader(object):
         """
         if os.path.isfile(self.vocab_path):
             print("Loading vocabulary from {}".format(self.vocab_path))
-            return pickle.load(open(self.vocab_path,"rb"),encoding="utf-8")
+            return pickle.load(open(self.vocab_path, "rb"))
         print("Loading vocabulary from data")
         counter = Counter()
         # get vocabulary from dialogues
         for subset in ["train", "valid", "test"]:
             for conversation in tqdm(self.conversation_data[subset]):
                 for message in conversation["messages"]:
-                    # remove movie Ids
+                    # remove movie Ids 去掉电影id@123
                     pattern = re.compile(r'@(\d+)')
                     text = tokenize(pattern.sub(" ", message["text"]))
                     counter.update([word.lower() for word in text])
-        # get vocabulary from movie names
+        # get vocabulary from movie names 把电影名字也放到词表中统计词频
         for movieId in self.db2name:
             tokenized_movie = tokenize(self.db2name[movieId])
             counter.update([word.lower() for word in tokenized_movie])
@@ -225,7 +222,7 @@ class DialogueBatchLoader(object):
         ))
         vocab += ['<s>', '</s>', '<pad>', '<unk>', '\n']
         with open(self.vocab_path, 'wb') as f:
-            pickle.dump(vocab, f)
+            pickle.dump(vocab, f, 2) # 使用 protocol 2, 配合 wb, 读取时使用rb
         print("Saved vocabulary in {}".format(self.vocab_path))
         return vocab
 

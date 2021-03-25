@@ -37,9 +37,7 @@ class Encoder(nn.Module):
     def set_pretrained_embeddings(self, embedding_matrix):
         """Set embedding weights."""
         with torch.no_grad():
-            # self.src_embedding.weight.data.set_(torch.from_numpy(embedding_matrix))
             self.src_embedding.weight.set_(torch.from_numpy(embedding_matrix))
-
 
     def forward(self, input, lengths, return_all=False, pool='last'):
         """Propogate input through the encoder."""
@@ -336,14 +334,6 @@ class GenSen(nn.Module):
             else:
                 return h_t
 
-class StrToBytes:  
-    def __init__(self, fileobj):  
-        self.fileobj = fileobj  
-    def read(self, size):  
-        return self.fileobj.read(size).encode()  
-    def readline(self, size=-1):  
-        return self.fileobj.readline(size).encode()
-
 
 class GenSenSingle(nn.Module):
     """GenSen Wrapper."""
@@ -356,7 +346,7 @@ class GenSenSingle(nn.Module):
         super(GenSenSingle, self).__init__()
         self.model_folder = model_folder
         self.filename_prefix = filename_prefix
-        self.pretrained_emb = pretrained_emb
+        self.pretrained_emb = os.path.join(model_folder, pretrained_emb)
         self.cuda = cuda
         self._load_params()
         self.vocab_expanded = False
@@ -364,10 +354,9 @@ class GenSenSingle(nn.Module):
     def _load_params(self):
         """Load pretrained params."""
         # Read vocab pickle files
-        model_vocab = pickle.load(
-            open(os.path.join(self.model_folder,'%s_vocab.pkl' % (self.filename_prefix)),"rb"),
-            encoding="utf-8"
-            )
+        filename = '{name}_vocab.pkl'.format(name = self.filename_prefix)
+        filename = os.path.join(self.model_folder, filename)
+        model_vocab = pickle.load(open(filename, "rb"), encoding='utf-8')
 
         # Word to index mappings
         self.word2id = model_vocab['word2id']
@@ -380,8 +369,8 @@ class GenSenSingle(nn.Module):
             ))
         else:
             encoder_model = torch.load(os.path.join(
-                self.model_folder,
-                '%s.model' % (self.filename_prefix)
+                self.model_folder, 
+                '{name}.model'.format(name = self.filename_prefix)
             ), map_location=lambda storage, loc: storage)
 
         # Initialize encoders
@@ -404,11 +393,10 @@ class GenSenSingle(nn.Module):
         """Traing linear regression model for the first time."""
         # Read pre-trained word embedding h5 file
         print('Loading pretrained word embeddings')
-        pretrained_embeddings = h5py.File(self.pretrained_emb)
-        pretrained_embedding_matrix = pretrained_embeddings['embedding'].value
-        # pretrained_embedding_matrix = np.ones((202494,512)) # 添加
+        pretrained_embeddings = h5py.File(self.pretrained_emb, mode='r')
+        pretrained_embedding_matrix = pretrained_embeddings['embedding'][()]
         pretrain_vocab = \
-            pretrained_embeddings['words_flatten'].value.split('\n')
+            pretrained_embeddings['words_flatten'][()].split('\n')
         pretrain_word2id = {
             word: ind for ind, word in enumerate(pretrain_vocab)
         }

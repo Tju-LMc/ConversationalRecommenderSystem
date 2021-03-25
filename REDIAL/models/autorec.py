@@ -160,8 +160,9 @@ class AutoRec(nn.Module):
 class ReconstructionLoss(nn.Module):
     def __init__(self):
         super(ReconstructionLoss, self).__init__()
-        # Sum of losses
+        # Sum of losses 过期api 可能需要注意
         self.mse_loss = nn.MSELoss(size_average=False)
+        # self.mse_loss = nn.MSELoss(reduction='sum')
         # Keep track of number of observer targets to normalize loss
         self.nb_observed_targets = 0
 

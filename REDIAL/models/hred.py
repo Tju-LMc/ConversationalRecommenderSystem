@@ -109,7 +109,7 @@ class HRED(nn.Module):
         loss = criterion(outputs.view(-1, vocab_size), target.view(-1))
         # backward pass
         loss.backward()
-        return loss.data[0]
+        return loss.item()
 
     def evaluate(self, batch_loader, criterion, subset="valid"):
         """
@@ -140,7 +140,7 @@ class HRED(nn.Module):
             target = batch["target"].view(-1, max_seq_length).index_select(0, idx)
 
             loss = criterion(outputs.view(-1, vocab_size), target.view(-1))
-            losses.append(loss.data[0])
+            losses.append(loss.item())
         print("{} loss : {}".format(subset, np.mean(losses)))
         self.train()
         return np.mean(losses)

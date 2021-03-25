@@ -24,14 +24,14 @@ random.shuffle(data)
 n_data = len(data)
 
 with open(os.path.join(movielens_path, "train_data"), 'w') as outfile:
-    writer = csv.writer(outfile)
+    writer = csv.writer(outfile, lineterminator='\n')
     for dat in data[:int(.8 * n_data)]:
         writer.writerow(dat)
 with open(os.path.join(movielens_path, "valid_data"), 'w') as outfile:
-    writer = csv.writer(outfile)
+    writer = csv.writer(outfile, lineterminator='\n')
     for dat in data[int(.8 * n_data):int(.9 * n_data)]:
         writer.writerow(dat)
 with open(os.path.join(movielens_path, "test_data"), 'w') as outfile:
-    writer = csv.writer(outfile)
+    writer = csv.writer(outfile, lineterminator='\n')
     for dat in data[int(.9 * n_data):]:
         writer.writerow(dat)

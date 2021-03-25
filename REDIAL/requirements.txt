@@ -1,5 +1,5 @@
 scikit-learn
-torch==1.3.0
+torch
 tqdm
 nltk
 h5py

@@ -180,7 +180,7 @@ class SentimentAnalysisBaseline(nn.Module):
             target = batch["forms"].cpu().data.numpy()
             output = self.forward(batch, pool=pool)  # tuple of (batch, 3) tensors
             loss = self.criterion(output, batch["forms"])
-            losses.append(loss.data[0])
+            losses.append(loss.item())
 
             # get the arg max for the categorical output
             Iseen = torch.max(output[0], 1)[1].squeeze().cpu()
