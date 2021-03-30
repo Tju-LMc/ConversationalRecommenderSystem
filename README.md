@@ -8,7 +8,8 @@
 
 + 对话推荐方向
   + 2017年经典 [Towards Deep Conversational Recommendations](https://arxiv.org/abs/1812.07617)
-
+  + 强化学习方法 [Conversational Recommendations System](https://arxiv.org/abs/1806.03277)
+    
 
 ## TODO
 
