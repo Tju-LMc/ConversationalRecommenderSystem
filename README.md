@@ -6,9 +6,14 @@
 
 ## 归档
 
-+ 对话推荐方向
-  + 2017年经典 [Towards Deep Conversational Recommendations](https://arxiv.org/abs/1812.07617)
-  + 强化学习方法 [Conversational Recommendations System](https://arxiv.org/abs/1806.03277)
++ 会话推荐
+  + [Towards Deep Conversational Recommendations](https://arxiv.org/abs/1812.07617)
+  + [Conversational Recommendations System](https://arxiv.org/abs/1806.03277)
+  + [Towards Knowledge-Based Recommender Dialog System](https://arxiv.org/abs/1908.05391)
+
++ 推荐
+
++ 对话
     
 
 ## TODO
