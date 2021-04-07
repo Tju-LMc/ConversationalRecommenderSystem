@@ -4,16 +4,15 @@
 
 同时为避免不同环境, 过时API困扰, 阅读论文并修改代码以适应最新版本依赖
 
-## 归档
+## awesome
 
-+ 会话推荐
++ Conversational Recommendation
   + [Towards Deep Conversational Recommendations](https://arxiv.org/abs/1812.07617)
   + [Conversational Recommendations System](https://arxiv.org/abs/1806.03277)
   + [Towards Knowledge-Based Recommender Dialog System](https://arxiv.org/abs/1908.05391)
 
-+ 推荐
++ Recommendation
 
-+ 对话
     
 
 ## TODO
