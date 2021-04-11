@@ -1,6 +1,6 @@
-## Conversational Recommendation
+## Conversational Recommendation System
 
-> 本仓库用于收集CRS的baseline，仅供大家学习科研使用, 同时修改代码以适应最新版本依赖
+> 本仓库用于收集CRS的baseline，仅供大家学习科研使用, 同时修改旧版本代码以适应最新版本依赖
 
 ### Survey
 
