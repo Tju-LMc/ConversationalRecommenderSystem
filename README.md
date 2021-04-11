@@ -7,9 +7,10 @@
 ## awesome
 
 + Conversational Recommendation
-  + [Towards Deep Conversational Recommendations](https://arxiv.org/abs/1812.07617)
-  + [Conversational Recommendations System](https://arxiv.org/abs/1806.03277)
-  + [Towards Knowledge-Based Recommender Dialog System](https://arxiv.org/abs/1908.05391)
+  + [Towards Deep Conversational Recommendations](https://arxiv.org/abs/1812.07617) NIPS 2018 [Dataset:REDIAL](https://redialdata.github.io/website/)
+  + [Conversational Recommendations System](https://arxiv.org/abs/1806.03277) SIGIR 2018
+  + [Towards Deep Conversational Recommendations.](https://arxiv.org/abs/1908.05391) EMNLP 2019
+  + [Deep Conversational Recommender in Travel](https://arxiv.org/abs/1907.00710) TKDE 2019
 
 + Recommendation
 
