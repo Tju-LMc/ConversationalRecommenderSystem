@@ -13,19 +13,33 @@
 
 ### Recommendation-based CRS
 
-  + Conversational Recommender System. `SIGIR(2018)` [[PDF]](https://arxiv.org/pdf/1806.03277)
-  + 
-  + [Towards Deep Conversational Recommendations.](https://arxiv.org/abs/1812.07617) NIPS 2018 [[Dataset:REDIAL]](https://redialdata.github.io/website/)
-  + [Conversational Recommendations System.](https://arxiv.org/abs/1806.03277) SIGIR 2018
-  + [Towards Deep Conversational Recommendations.](https://arxiv.org/abs/1908.05391) EMNLP 2019
-  + [Deep Conversational Recommender in Travel.](https://arxiv.org/abs/1907.00710) TKDE 2019
+  1. Conversational Recommender System. `SIGIR(2018)` [[PDF]](https://arxiv.org/pdf/1806.03277) [Dataset:Yelp]
+  2. Towards Conversational Search and Recommendation: System Ask, User Respond. `CIKM(2018)` [[PDF]](https://par.nsf.gov/servlets/purl/10090082) [[Dataset:SAUR]](http://yongfeng.me/attach/conversation.zip)
+  3. Estimation-Action-Reflection: Towards Deep Interaction Between Conversational and Recommender Systems. `WSDM(2020)` [[PDF]](https://arxiv.org/pdf/2002.09102) [[Code]](https://ear-conv-rec.github.io/) [Dataset:Yelp]
+  4. Interactive Path Reasoning on Graph for Conversational Recommendation. `KDD(2020)` [[PDF]](https://arxiv.org/pdf/2007.00194) [[Code]](https://cpr-conv-rec.github.io/)
+  5. Towards Conversational Search and Recommendation. `CIKM(2019)` [[PDF]](http://yongfeng.me/attach/conv-search-rec-zhang2018.pdf) [[Dataset:Amazon]](http://yongfeng.me/dataset)
+  6. Latent Linear Critiquing for Conversational Recommender Systems. `WWW(2020)` [[PDF]](https://ssanner.github.io/papers/www20_llc.pdf) [[Code]](https://github.com/k9luo/LatentLinearCritiquingforConvRecSys) [Dataset:Amazon]
+  7. Towards Question-Based Recommender Systems. `SIGIR(2020)` [[PDF]](https://arxiv.org/pdf/2005.14255.pdf) [[Code]](https://github.com/JieZouIR/Qrec)
+  8. Towards Explainable Conversational Recommendation. `IJCAI(2020)` [[PDF]](https://www.ijcai.org/Proceedings/2020/0414.pdf)
 
-+ Recommendation
+### Dialogue-based CRS
+  1. Towards Deep Conversational Recommendations. `NeurIPS(2018)` [[PDF]](https://arxiv.org/abs/1812.07617) [[Dataset:REDIAL]](https://redialdata.github.io/website/)
+  2. Deep Conversational Recommender in Travel. `TKDE(2019)` [[PDF]](https://arxiv.org/abs/1907.00710) [[Code]](https://github.com/truthless11/DCR) [Dataset:MultiWOZ]
+  3. Towards Knowledge-Based Recommender Dialog System. `EMNLP(2019)` [[PDF]](https://arxiv.org/pdf/1908.05391.pdf) [[Code]](https://github.com/THUDM/KBRD) [Dataset:REDIAL]
+  4. Recommendation as a Communication Game: Self-Supervised Bot-Play for Goal-oriented Dialogue. `EMNLP(2019)` [[PDF]](https://arxiv.org/pdf/1909.03922) [[Code]](https://github.com/facebookresearch/ParlAI) [[Dataset: GoRecDial]](https://drive.google.com/drive/folders/1nilk6FUktW2VjNlATdM0VMehzSOPIvJ0?usp=sharing)
+  5. OpenDialKG: Explainable Conversational Reasoning with Attention-based Walks over Knowledge Graphs. `ACL(2019)` [[PDF]](https://www.aclweb.org/anthology/P19-1081.pdf) [[Code]](https://github.com/madcpt/OpenDialKG) [[Dataset: OpenDialKG]](https://github.com/facebookresearch/opendialkg)
+  6. Improving Conversational Recommender Systems via Knowledge Graph based Semantic Fusion. `KDD(2020)` [[PDF]](https://arxiv.org/pdf/2007.04032) [[Code]](https://github.com/Lancelot39/KGSF) [Dataset:REDIAL]
+  7. Towards Conversational Recommendation over Multi-Type Dialogs. `ACL(2020)` [[PDF]](https://arxiv.org/pdf/2005.03954.pdf) [[Code]](https://github.com/PaddlePaddle/models/tree/develop/PaddleNLP/Research/ACL2020-DuRecDial) [[Dataset: DuRecDial]](https://baidu-nlp.bj.bcebos.com/DuRecDial.zip)
+  8. Bridging the Gap between Conversational Reasoning and Interactive Recommendation. `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2010.10333.pdf) [[Code]](https://github.com/truthless11/CR-Walker) [Dataset:REDIAL]
+  9. INSPIRED: Toward Sociable Recommendation Dialogue Systems. `EMNLP(2020)` [[PDF]](https://www.aclweb.org/anthology/2020.emnlp-main.654.pdf) [[Dataset:INSPIRED]](https://github.com/sweetpeach/Inspired)
+  10. Towards Topic-Guided Conversational Recommender System. `COLING(2020)` [[PDF]](https://arxiv.org/pdf/2010.04125) [[Dataset:TG-ReDial]](https://github.com/RUCAIBox/TG-ReDial)
 
-    
+### Toolkit
+  1. CRSLab: An Open-Source Toolkit for Building Conversational Recommender System. `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.00939.pdf) [[Code]](https://github.com/RUCAIBox/CRSLab)
+
+
 
 ## TODO
 
-当前进度 v0.1, 阅读并补充论文中
-
-ddl 4.7 v0.2
+~v0.1~
+v0.2
