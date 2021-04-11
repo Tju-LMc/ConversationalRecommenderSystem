@@ -1,8 +1,6 @@
-# 论文收集与复现
+## 论文收集与复现
 
-收集研究方向中可以实现的，经典的baseline论文，按时间线进行整理, 供大家学习使用
-
-同时为避免不同环境, 过时API困扰, 阅读论文并修改代码以适应最新版本依赖
+> 本仓库用于收集CRS的baseline，仅供大家学习科研使用, 同时修改代码以适应最新版本依赖
 
 ## Conversational Recommendation
 
@@ -23,6 +21,7 @@
   8. Towards Explainable Conversational Recommendation. `IJCAI(2020)` [[PDF]](https://www.ijcai.org/Proceedings/2020/0414.pdf)
 
 ### Dialogue-based CRS
+
   1. Towards Deep Conversational Recommendations. `NeurIPS(2018)` [[PDF]](https://arxiv.org/abs/1812.07617) [[Dataset:REDIAL]](https://redialdata.github.io/website/)
   2. Deep Conversational Recommender in Travel. `TKDE(2019)` [[PDF]](https://arxiv.org/abs/1907.00710) [[Code]](https://github.com/truthless11/DCR) [Dataset:MultiWOZ]
   3. Towards Knowledge-Based Recommender Dialog System. `EMNLP(2019)` [[PDF]](https://arxiv.org/pdf/1908.05391.pdf) [[Code]](https://github.com/THUDM/KBRD) [Dataset:REDIAL]
@@ -35,6 +34,7 @@
   10. Towards Topic-Guided Conversational Recommender System. `COLING(2020)` [[PDF]](https://arxiv.org/pdf/2010.04125) [[Dataset:TG-ReDial]](https://github.com/RUCAIBox/TG-ReDial)
 
 ### Toolkit
+
   1. CRSLab: An Open-Source Toolkit for Building Conversational Recommender System. `arXiv(2021)` [[PDF]](https://arxiv.org/pdf/2101.00939.pdf) [[Code]](https://github.com/RUCAIBox/CRSLab)
 
 
@@ -42,4 +42,5 @@
 ## TODO
 
 ~v0.1~
+
 v0.2
