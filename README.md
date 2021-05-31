@@ -17,6 +17,7 @@
   6. Latent Linear Critiquing for Conversational Recommender Systems. `WWW(2020)` [[PDF]](https://ssanner.github.io/papers/www20_llc.pdf) [[Code]](https://github.com/k9luo/LatentLinearCritiquingforConvRecSys) [Dataset:Amazon]
   7. Towards Question-Based Recommender Systems. `SIGIR(2020)` [[PDF]](https://arxiv.org/pdf/2005.14255.pdf) [[Code]](https://github.com/JieZouIR/Qrec)
   8. Towards Explainable Conversational Recommendation. `IJCAI(2020)` [[PDF]](https://www.ijcai.org/Proceedings/2020/0414.pdf)
+  9. Unified Conversational Recommendation Policy Learning via Graph-based Reinforcement Learning. `SIGIR(2021)` [[PDF]](https://arxiv.org/abs/2105.09710) [Dataset:Yelp,LastFM,E-Commerce]
 
 ### Dialogue-based CRS
 
