@@ -18,6 +18,7 @@
   7. Towards Question-Based Recommender Systems. `SIGIR(2020)` [[PDF]](https://arxiv.org/pdf/2005.14255.pdf) [[Code]](https://github.com/JieZouIR/Qrec)
   8. Towards Explainable Conversational Recommendation. `IJCAI(2020)` [[PDF]](https://www.ijcai.org/Proceedings/2020/0414.pdf)
   9. Unified Conversational Recommendation Policy Learning via Graph-based Reinforcement Learning. `SIGIR(2021)` [[PDF]](https://arxiv.org/abs/2105.09710) [Dataset:Yelp,LastFM,E-Commerce]
+  10. Learning to Ask Appropriate Questions in Conversational Recommendation. `SIGIR(2021)` [[PDF]](https://arxiv.org/abs/2105.04774)
 
 ### Dialogue-based CRS
 
@@ -31,6 +32,8 @@
   8. Bridging the Gap between Conversational Reasoning and Interactive Recommendation. `arXiv(2020)` [[PDF]](https://arxiv.org/pdf/2010.10333.pdf) [[Code]](https://github.com/truthless11/CR-Walker) [Dataset:REDIAL]
   9. INSPIRED: Toward Sociable Recommendation Dialogue Systems. `EMNLP(2020)` [[PDF]](https://www.aclweb.org/anthology/2020.emnlp-main.654.pdf) [[Dataset:INSPIRED]](https://github.com/sweetpeach/Inspired)
   10. Towards Topic-Guided Conversational Recommender System. `COLING(2020)` [[PDF]](https://arxiv.org/pdf/2010.04125) [[Dataset:TG-ReDial]](https://github.com/RUCAIBox/TG-ReDial)
+  11. RevCore: Review-augmented Conversational Recommendation. `ACL Findings(2021)` [[PDF]](https://arxiv.org/abs/2106.00957)
+  12. DEUX: An Attribute-Guided Framework for Sociable Recommendation Dialog Systems. `Arxiv(2021)` [[PDF]](https://arxiv.org/abs/2105.00825)
 
 ### Toolkit
 
