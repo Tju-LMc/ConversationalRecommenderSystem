@@ -19,6 +19,7 @@
   8. Towards Explainable Conversational Recommendation. `IJCAI(2020)` [[PDF]](https://www.ijcai.org/Proceedings/2020/0414.pdf)
   9. Unified Conversational Recommendation Policy Learning via Graph-based Reinforcement Learning. `SIGIR(2021)` [[PDF]](https://arxiv.org/abs/2105.09710) [Dataset:Yelp,LastFM,E-Commerce]
   10. Learning to Ask Appropriate Questions in Conversational Recommendation. `SIGIR(2021)` [[PDF]](https://arxiv.org/abs/2105.04774)
+  11. Adapting User Preference to Online Feedback in Multi-round Conversational Recommendation. `WADM(2021)` [[PDF]](https://dl.acm.org/doi/abs/10.1145/3437963.3441791)
 
 ### Dialogue-based CRS
 
