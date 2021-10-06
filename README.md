@@ -1,6 +1,6 @@
 ## Conversational Recommendation System
 
-> This repository is used to collect the baseline of CRS, which is only for everyone to learn and use, and at the same time modify the old version of the code to adapt to the latest version of the dependency.
+> This repository is used to collect the baseline of CRS, which is only used for scientific research, and at the same time modify the old version of the code to adapt to the latest version of the dependency.
 
 ### Survey
 
