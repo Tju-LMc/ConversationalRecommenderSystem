@@ -1,6 +1,6 @@
 ## Conversational Recommendation System
 
-> 本仓库用于收集CRS的baseline，仅供大家学习科研使用, 同时修改旧版本代码以适应最新版本依赖
+> This repository is used to collect the baseline of CRS, which is only for everyone to learn and use, and at the same time modify the old version of the code to adapt to the latest version of the dependency.
 
 ### Survey
 
@@ -20,6 +20,7 @@
   9. Unified Conversational Recommendation Policy Learning via Graph-based Reinforcement Learning. `SIGIR(2021)` [[PDF]](https://arxiv.org/abs/2105.09710) [Dataset:Yelp,LastFM,E-Commerce]
   10. Learning to Ask Appropriate Questions in Conversational Recommendation. `SIGIR(2021)` [[PDF]](https://arxiv.org/abs/2105.04774)
   11. Adapting User Preference to Online Feedback in Multi-round Conversational Recommendation. `WADM(2021)` [[PDF]](https://dl.acm.org/doi/abs/10.1145/3437963.3441791)
+  12. Comparison-based Conversational Recommender System with Relative Bandit Feedback. `SIGIR(2021)` [[PDF]](https://dl.acm.org/doi/10.1145/3404835.3462920) [[Code]](https://github.com/fffffarmer/RelativeConUCB)
 
 ### Dialogue-based CRS
 
@@ -35,6 +36,14 @@
   10. Towards Topic-Guided Conversational Recommender System. `COLING(2020)` [[PDF]](https://arxiv.org/pdf/2010.04125) [[Dataset:TG-ReDial]](https://github.com/RUCAIBox/TG-ReDial)
   11. RevCore: Review-augmented Conversational Recommendation. `ACL Findings(2021)` [[PDF]](https://arxiv.org/abs/2106.00957)
   12. DEUX: An Attribute-Guided Framework for Sociable Recommendation Dialog Systems. `Arxiv(2021)` [[PDF]](https://arxiv.org/abs/2105.00825)
+  13. Learning Neural Templates for Recommender Dialogue System. `EMNLP(2021)` [[PDF]](https://arxiv.org/abs/2109.12302) [[Code]](https://github.com/jokieleung/NTRD?utm_source=catalyzex.com)
+  14. CRFR: Improving Conversational Recommender Systems via Flexible Fragments Reasoning on Knowledge Graphs. `EMNLP(2021)` [[PDF]]
+  15. DuRecDial 2.0: A Bilingual Parallel Corpus for Conversational Recommendation. `EMNLP(2021)` [[PDF]](https://arxiv.org/abs/2109.08877)
+  16. CR-Walker: Tree-Structured Graph Reasoning and Dialog Acts for Conversational Recommendation. `EMNLP(2021)` [[PDF]](https://arxiv.org/abs/2010.10333)
+  17. KERS: A Knowledge-Enhanced Framework for Recommendation Dialog Systems with Multiple Subgoals. `EMNLP(2021)` [[PDF]]
+
+### Other
+  1. "It doesn't look good for a date": Transforming Critiques into Preferences for Conversational Recommendation Systems. `EMNLP(2021)` [[PDF]](https://arxiv.org/abs/2109.07576)
 
 ### Toolkit
 
@@ -46,4 +55,6 @@
 
 ~v0.1~
 
-v0.2
+~v0.2~
+
+continue!
